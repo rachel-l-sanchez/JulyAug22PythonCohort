@@ -27,9 +27,10 @@ z[0]['y'] = 30
 def iterateDictionary(some_list):
     for i in some_list:
         for key,value in i.items():
-            N = 2
-            output = dict(list(i.items())[0:N])
-            print(str(output))
+            key_d = iter(i.keys())
+            res,res2 = next(key_d), next(key_d)
+            output, output2 = (f"{res} - {value}") , (f"{res2} - {value}")
+            print(f"{output}, {output2}")
             
 sports_players = [
          {'Basketball':  'Kobe Bryant', 'Golf' : 'Tiger Woods'},
@@ -52,16 +53,10 @@ print(iterateDictionary(sports_players))
 def iterateDictionary2(key_name,list):
     for i in list:
         for key_name, val in i.items():
-            try:
-                items = i.keys()
-                keys = iter(items)
-                key1 = next(keys)
-                res = (f"{key1} - {val}")
-                key2= next(keys)
-                res2= (f"{key2} - {val}")
-                print(str(f"{res}, {res2}"))
-            except: 
-                return None
+                keys, values = iter(i.keys()), iter(i.values())
+                val1, val2 = next(values), next(values)
+                key1, key2 = next(keys), next(keys)
+                print(str(f"{key1} - {val1}, {key2}  - {val2}"))
     
 students = [   {'first_name': 'Michael', 'last_name' : 'Jordan'},
          {'first_name' : 'John', 'last_name' : 'Rosales'},
@@ -70,5 +65,4 @@ students = [   {'first_name': 'Michael', 'last_name' : 'Jordan'},
          ]
 
 iterateDictionary2('first_name',students)
-iterateDictionary2('last_name',students)
 
