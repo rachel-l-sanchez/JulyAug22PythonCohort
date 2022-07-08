@@ -53,8 +53,13 @@ def iterateDictionary2(key_name,list):
     for i in list:
         for key_name, val in i.items():
             try:
-                res = key_name + "-" + val
-                print(str(res))
+                items = i.keys()
+                keys = iter(items)
+                key1 = next(keys)
+                res = (f"{key1} - {val}")
+                key2= next(keys)
+                res2= (f"{key2} - {val}")
+                print(str(f"{res}, {res2}"))
             except: 
                 return None
     
