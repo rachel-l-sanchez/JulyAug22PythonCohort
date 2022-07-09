@@ -72,9 +72,6 @@ john.enroll()
 michael.enroll()
 sarah.enroll()
 # spent_points method
-p_spent = john.spend_points(80)
-# john should have -30
-points_spend = michael.spend_points(50)
-# michael should have 0
-points_left = sarah.spend_points(60)
-# sarah should have 140
+p_spent = john.spend_points(50)
+points_spend = michael.spend_points(80)
+points_left = sarah.spend_points(40)
