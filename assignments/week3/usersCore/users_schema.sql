@@ -51,38 +51,27 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
-insert into users (id, first_name, last_name, email)
-values(1, 'Monty', 'Python', 'monty.python@gmail.com'), (2, 'Harry','Potter', 'hpotter@gmail.com'), (3, 'Hermione', 'Granger', 'hgranger@hotmail.com');
+insert into users (first_name, last_name, email)
+values ('Monty', 'Python', 'monty.python@gmail.com'), ('Harry','Potter', 'hpotter@gmail.com'), ('Hermione', 'Granger', 'hgranger@hotmail.com');
 
 select *
-from users_schema;
+from users;
 
-select users
-from users_schema
+select * from users
 where email='hgranger@hotmail.com';
 
-select users
-from users_schema
+select * from users
 where id = 3;
 
-update users 
-set last_name = 'Pancakes'
-where id=3;
+update users set last_name = 'Pancakes'
+where users.id=3;
 
 delete from users
-where id=2;
+where user.id=2;
 
-select *
-from users
+select * from users
 order by first_name ASC;
 
 select * 
 from users
 order by first_name DESC;
-
-
-
-
-
-
-
