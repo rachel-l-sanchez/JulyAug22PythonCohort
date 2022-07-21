@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `dojos_and_ninjas_schema`.`dojos` ;
 CREATE TABLE IF NOT EXISTS `dojos_and_ninjas_schema`.`dojos` (
   `dojo_id` INT NOT NULL AUTO_INCREMENT,
   `dojo_name` VARCHAR(100) NOT NULL,
-  `created_at` DATETIME NOT NULL,
+  `created_at` DATETIME NULL,
   `updated_at` VARCHAR(45) NULL,
   PRIMARY KEY (`dojo_id`))
 ENGINE = InnoDB;
@@ -58,22 +58,25 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 SET SQL_SAFE_UPDATES = 0;
 
 
-Insert into dojos(dojo_id, dojo_name, created_at)
-values ('1', 'Shotokan School', current_timestamp()),('2', 'Shotokan School', current_timestamp()),('3','Shotokan School', current_timestamp());
+Insert into dojos(dojo_name)
+values ('Shotokan School'),('Dojo Master'),('Dojo Online');
 
 delete from dojos where dojo_name = 'Shotokan School';
 
-Insert into dojos (dojo_id, dojo_name, created_at)
-values ('1', 'Rumble Dojo', current_timestamp()), ('2','Rumble Dojo', current_timestamp()), ('3', 'Rumble Dojo',current_timestamp());
+Insert into dojos (dojo_name)
+values ('Rumble Dojo');
 
-insert into ninjas (id, first_name, last_name, dojo_id, age)
-values 
-	(1, 'Rachel', 'Sanchez', '1','28'),
-	(2, 'Monty', 'Python', '1', '53'),
-    (3, 'James', 'Bond', '1', '37');
+insert into ninjas (first_name, last_name, dojo_id, age)
+values ('Rachel', 'Sanchez', '1','28'),('Monty', 'Python', '1', '53'),('James', 'Bond', '1', '37');
 
-Select first_name, last_name
-from ninjas
+insert into ninjas (first_name, last_name, dojo_id, age)
+values (4, 'Harry', 'Potter', '28'),(5, 'Hermione', 'Granger','31'),(6, 'Ron', 'Weasley', 2, '30');
+
+insert into ninjas (first_name, last_name, dojo_id, age)
+values (7, 'Sabrina', 'Spellman', 3, '16'), (8, 'Kal', 'Drogo', 3, '33'), (9, 'Doctor', 'Strange', 3, '35');
+
+Select * from dojos
+left join ninjas on ninjas.id = dojos.dojo_id
 where dojo_id = 1;
 
 select first_name, last_name
@@ -88,7 +91,8 @@ select id, first_name, last_name
 from ninjas
 where id = 9;
 
-
-
+select * from dojos
+left join ninjas on ninjas.id = dojos.dojo_id
+	where dojos.dojo_id = (select id from dojos order by id ASC limit 1);
 
 
