@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0px;
+}
+
+h1,p,a {
+    text-align: center;
+}
+
+h1, input {
+    margin-right: 10rem;
+}
+
+main, .button_class, .input_output, form, input {
+    display: flex;
+    justify-content: center;
+}
+
+.click, .reset, .plus-two {
+    color: darkgray;
+    width: 20vh;
+    height: 2rem;
+    border-radius: 25%;
+}
+
+.click {
+    background-color: blue;
+}
+
+.click:hover {
+    background-color: pink;
+}
+
+.plus-two {
+    background-color: green;
+    margin-left: 10rem;
+}
+
+.plus-two:hover {
+    background-color: yellow;
+}
+
+.reset:hover {
+    background-color: rebeccapurple;
+}
+
+.reset {
+    background-color: red;
+    margin-left: 8rem;
+}
+
+.input_output, form {
+    margin-left: 10rem;
+}
+
+.any_num {
+    margin-right: 18rem;
+    width: 20rem;
+}
+
+.input_output {
+    margin-left: 8rem;
+    width: 20rem;
+}
+
+.button_class {
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 30rem;
+    margin-left: 13rem;
+}
+
+main,.input_output,form {
+    flex-direction: column;
+}
+
+a {
+    width: 20rem;
+}
+
+p {
+    margin-left: 18rem;
+}
