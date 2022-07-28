@@ -1,0 +1,70 @@
+ * {
+    margin: 0;  
+    padding: 0;
+ }
+
+.heading {
+    margin-top: 0rem;
+}
+
+h2:last-child {
+    top: 3.5rem;
+    left: 35rem;
+}
+
+h1, h2, .num_output {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+p {
+    width: 25rem;
+    background-color: aquamarine;
+    border-color: black;
+}
+
+.guesses {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+a, .output, .guess {
+    margin: 0 auto;
+}
+
+.guess, a {
+    display: block;
+}
+
+.guess {
+    width: 15rem;
+}
+
+a {
+    border: 2px solid black;
+    width: 5rem;
+}
+
+.count {
+    background-color: white;
+}
+
+.num_output {
+    height: 20rem;
+    font-weight:700;
+    font-size: 5vh;
+    padding: 20px;
+    line-height: 20rem;
+    border: 2px solid black;
+}
+
+
+
+
