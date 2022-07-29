@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <th>Submitted Info</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td class="output">{{session["name"]}}</td>
+            </tr>
+            <tr>
+                <td>Dojo Location:</td>
+                <td class="output">{{session["location"]}}</td>
+            </tr>
+            <tr>
+                <td>Favorite Language:</td>
+                <td>{% for language in fave_language: %}</td>
+                    <td>{{language}}</td
+                <td>{% endfor %}</td>
+            </tr>
+            <tr>
+                <td class="comment">Comment:</td>
+                <td class="comment">{{session["comment"]}}</td>
+            </tr>
+        </table>
+        <div class="btn_container">
+            <a href="/back" type="submit" class="back_button">Back</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+* {
+    margin:0;
+    padding: 0;
+    font-family: comic sans ms;
+}
+
+table, .name_label, tr, .comment_label, .input_form,.full_name, .location, .language, .container, .back_button, main, .comment, .btn_container, .submit  {
+    display: flex;
+}
+
+.full_name, .location, .language, .container, .back_button, main, table, .comment, .btn_container, .submit {
+    justify-content: space-between;
+}
+
+table,.name_label, .location_label, .language_label, .comment_label {
+    justify-content: space-evenly;
+}
+
+.input_form, table, .back_button {
+    border: 2px solid black;
+}
+
+.input_form, main, .comment, .comment_label {
+    flex-direction: column;
+}
+
+.full_name, .location, .language, .full_name {
+    flex-direction: row;
+    min-width: 25rem;
+    gap: 5px;
+
+}
+
+.submit , .btn_container {
+    justify-content: end;
+}
+
+.container {
+    align-items: flex-start;
+}
+
+th {
+    text-decoration:solid;
+}
+
+.name_label, .location_label, .language_label, .comment_label {
+    gap: 10px;
+}
+
+.location_labels {
+    float: left;
+}
+
+main {
+    min-width: 10rem;
+    min-height: 30rem;
+}
+
+.submit_btn, .back_button, .input_form, table {
+    align-self: center;
+}
+
+.input_form, table {
+    min-height: 28rem;
+    font-size: larger;
+    margin-top: 10rem;
+}
+
+.input_form {
+    align-items: center;
+    min-width: 32rem;
+}
+
+table {
+    min-width: 24rem;
+    min-height: 28rem;
+    margin-left: 15rem;
+}
+
+.submit_btn, .back_button {
+    background-color: rgb(115, 195, 230);
+    padding: 7px;
+    min-width: 3rem;
+}
+
+.radio {
+    vertical-align: middle;
+}
+
+#name {
+    width: 12rem;
+}
+
+table, .name_label {
+    justify-content: flex-start;
+}
+
+.radio, .python_btn,.java_btn, .javascript_btn, .react_btn {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.python_btn,.java_btn, .javascript_btn, .react_btn {
+    margin: 0 auto;
+}
+
+.python_btn,.java_btn, .javascript_btn, .react_btn, .radio {
+    display: inline-block;
+}
+
+.language_labels, .input_form, table {
+    justify-content: center;
+}
+
+.container, tr {
+    align-items: flex-start;
+}
+
+tr {
+    padding: 10px;
+}
+
+td {
+    padding-left: 20px;
+    min-width: 11rem;
+}
+
+.output {
+    padding-left: 100px;
+}
+
+th {
+    text-decoration:underline;
+}
+
+.submit_btn, .back_button {
+    align-content: flex-end;
+    justify-content: flex-end;
+    margin-left: 14rem;
+}
+
+.back_button {
+   position: absolute;
+   top: 29rem;
+   right: 21rem;
+   min-width: 2rem;
+   color: black;
+    
+}

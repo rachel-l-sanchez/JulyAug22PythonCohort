@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main>
+        <form method="post" action='/process' class="input_form">
+            <div class="full_name">
+                <label for="name">Your Name:</label>
+                <div class="name_label">
+                    <input type="text" name="name" id="name" placeholder="Your Name"></input>
+                </div>
+            </div>
+            <div class="location">
+                    <label for="location">Dojo Location:</label>
+                <div class="location_labels">
+                    <label for="bellevue">Bellevue
+                    <input type="radio" class="radio" value="Bellevue" id="bellevue" name="location"></label>
+                    <label for="SanJose">San Jose
+                    <input type="radio" class="radio" id="radio_SJ" value="San Jose" name="location"></label>
+                </div>
+            </div>
+            <div class="language">
+                <label for="language">Favorite Language:</label>
+                <div class="language_labels">
+                    <div>
+                        <label for="Python"><input type="checkbox" value="Python" name="language" class="python_btn"></input>Python</label>
+                    </div>
+                    <div>
+                        <label for="Java"><input type="checkbox" value="Java" name="language" class="java_btn"></input>Java</label>
+                    </div>
+                    <div>
+                        <label for="React"><input type="checkbox" value="React" name="language" class="react_btn"></input>React</label>
+                    </div>
+                    <div>
+                        <label for="Javascript"><input type="checkbox" value="Javascript" name="language" class="javascript_btn"></input>Javascript</label>
+                    </div>
+                </div>
+            </div>
+            <div class="comment">
+                <label for="comment" class="comment_label">Comment (optional):</label>
+                <div class="comment_label">
+                    <textarea name="comment" rows="7" cols="47"></textarea>
+                </div>
+            </div>
+            <div class="submit">
+                <button type="submit" name="submit" class="submit_btn">Submit</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
