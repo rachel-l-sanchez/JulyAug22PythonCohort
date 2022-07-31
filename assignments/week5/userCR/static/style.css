@@ -4,8 +4,11 @@
     box-sizing: border-box;
 }
 
-form {
+th,tr, td, .user_output, table, form {
     display: flex;
+}
+
+form {
     flex-direction: column;
     gap: 15px;
 }
@@ -32,30 +35,23 @@ input {
 }
 
 table {
-    display: flex;
     min-width: 20rem;
     gap: 10px;
-    border-collapse: collapse;
+}
+
+
+th,tr, td, .user_output, table {
+    min-width: 15rem;
+    justify-content: space-between;
 }
 
 .user_output {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-}
-
-th,tr, td, .user_output {
-    min-width: 15rem;
-    display: flex;
-    justify-content: space-between;
 }
 
 tr {
     min-width: 20rem;
 }
 
-.col:nth-child(7) {
-    min-width: 5rem;
-    margin-left: 10px;
-}
 
