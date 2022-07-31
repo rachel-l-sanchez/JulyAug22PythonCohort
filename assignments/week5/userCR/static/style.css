@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+h1 {
+    text-align:left;
+}
+
+main {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+button {
+    max-width: 10rem;
+}
+
+.container {
+    min-width: 25rem;
+}
+
+input {
+    max-width: 20rem;
+}
+
+table {
+    display: flex;
+    min-width: 20rem;
+    gap: 10px;
+    border-collapse: collapse;
+}
+
+.user_output {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+th,tr, td, .user_output {
+    min-width: 15rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+tr {
+    min-width: 20rem;
+}
+
+.col:nth-child(7) {
+    min-width: 5rem;
+    margin-left: 10px;
+}
+
