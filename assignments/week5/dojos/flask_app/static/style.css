@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    margin-top: 10%;
+}
+
+.dojos {
+    min-width: 15rem;
+}
+
+button {
+    max-height: 3rem;
+    max-width: 8rem;
+    text-align: center;
+}
+form, a, .ninja, .ninja_form, .container{
+    display: flex;
+}
+
+form, a, .ninja {
+    flex-wrap: wrap;
+}
+
+form {
+    gap: 10px;
+    min-width: 15rem;
+}
+
+body {
+    width: 80%;
+    height: 80%;
+}
+
+a {
+    white-space: nowrap;
+}
+
+
+.ninja {
+    align-items: flex-end;
+    align-self: baseline;
+}
+
+.ninja_form {
+    max-width: 19rem;
+    margin: 0px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.nin_form {
+    max-height: 28rem;
+    min-width: 100%;
+}
+
+.container {
+    width: 80%;
+    gap: 100px;
+}
+
+.wrapper {
+    gap: 20px;
+    margin-left: 5rem;
+}
+
+table tr td {
+    min-width: 18rem;
+}
+.table_view {
+    margin-left: 100px;
+}
