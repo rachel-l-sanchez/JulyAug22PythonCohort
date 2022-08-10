@@ -68,7 +68,7 @@ class User:
         return results
     
     @classmethod
-    def select_all(cls):
+    def select_all(cls, data):
         query = "SELECT * from users where id=%(id)s;"
         results = connectToMySQL(cls.DB).query_db(query)
         return results

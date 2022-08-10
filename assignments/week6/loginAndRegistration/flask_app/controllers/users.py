@@ -27,6 +27,7 @@ def register():
 
 @app.route('/login', methods=['POST'])
 def login():
+    users = user.User.login_by_email()
     data = {
         'email': request.form['email'],
         'password': request.form['password']
@@ -44,7 +45,12 @@ def login():
 
 @app.route('/dashboard')
 def logout():
-    return render_template('logout.html')
+    if 'user_id' not in session:
+        return redirect('/logout/user')
+    data = {
+        'id': session['user_id']
+    }
+    return render_template('logout.html', users=user.User.select_all(data) )
 
 @app.route('/dashboard/user', methods=['POST'])
 def userDash():
